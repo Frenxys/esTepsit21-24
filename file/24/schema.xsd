@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Definizione del tipo complesso per le informazioni di un'attività -->
+  <xs:complexType name="attivitaType">
+    <xs:sequence>
+      <xs:element name="descrizione" type="xs:string"/>
+      <xs:element name="scadenza" type="xs:date"/>
+      <xs:element name="avanzamento" type="xs:decimal"/>
+      <xs:element name="priorita" type="prioritaType"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Enumerazione per il tipo di priorità -->
+  <xs:simpleType name="prioritaType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ALTA"/>
+      <xs:enumeration value="MEDIA"/>
+      <xs:enumeration value="BASSA"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Definizione del tipo complesso per le informazioni di una persona -->
+  <xs:complexType name="personaType">
+    <xs:sequence>
+      <xs:element name="cognome" type="xs:string"/>
+      <xs:element name="nome" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Definizione del tipo complesso per le informazioni di un progetto -->
+  <xs:complexType name="progettoType">
+    <xs:sequence>
+      <xs:element name="denominazione" type="xs:string"/>
+      <xs:element name="personeCoinvolte" type="personaType" minOccurs="1" maxOccurs="unbounded"/>
+      <xs:element name="budgetDisponibile" type="xs:decimal"/>
+      <xs:element name="attivita" type="attivitaType" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Definizione del tipo complesso per le informazioni del documento -->
+  <xs:complexType name="documentoType">
+    <xs:sequence>
+      <xs:element name="progetto" type="progettoType" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Definizione dell'elemento radice del documento XML -->
+  <xs:element name="documento" type="documentoType"/>
+
+</xs:schema>

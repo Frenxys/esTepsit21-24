@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Definizione del tipo complesso per un articolo -->
+  <xs:complexType name="articoloType">
+    <xs:sequence>
+      <xs:element name="titolo" type="xs:string"/>
+      <xs:element name="sottotitolo" type="xs:string"/>
+      <xs:element name="intestazione" type="xs:string"/>
+      <xs:element name="autore" type="xs:string"/>
+      <xs:element name="data" type="xs:date"/>
+      <xs:element name="corpo" type="corpoType"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Definizione del tipo complesso per il giornale con un minimo di un articolo e un massimo indefinito-->
+  <xs:complexType name="giornaleType">
+    <xs:sequence>
+      <xs:element name="articolo" type="articoloType" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Definizione del tipo complesso corpoType con un numero indefinito di paragrafi -->
+  <xs:complexType name="corpoType">
+    <xs:sequence>
+      <xs:element name="paragrafo" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Definizione dell'elemento radice -->
+  <xs:element name="giornale" type="giornaleType"/>
+
+</xs:schema>

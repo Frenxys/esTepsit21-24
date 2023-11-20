@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<giornale xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="schema.xsd">
+
+  <articolo>
+    <titolo>Titolo dell'articolo 1</titolo>
+    <sottotitolo>Sottotitolo dell'articolo 1</sottotitolo>
+    <intestazione>Intestazione dell'articolo 1</intestazione>
+    <autore>Nome dell'autore 1</autore>
+    <data>2023-11-16</data>
+    <corpo>
+      <paragrafo>Primo paragrafo dell'articolo 1.</paragrafo>
+      <paragrafo>Secondo paragrafo dell'articolo 1.</paragrafo>
+    </corpo>
+  </articolo>
+
+  <articolo>
+    <titolo>Titolo dell'articolo 2</titolo>
+    <sottotitolo>Sottotitolo dell'articolo 2</sottotitolo>
+    <intestazione>Intestazione dell'articolo 2</intestazione>
+    <autore>Nome dell'autore 2</autore>
+    <data>2023-11-17</data>
+    <corpo>
+      <paragrafo>Primo paragrafo dell'articolo 2.</paragrafo>
+      <paragrafo>Secondo paragrafo dell'articolo 2.</paragrafo>
+    </corpo>
+  </articolo>
+
+</giornale>

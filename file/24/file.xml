@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<documento xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:noNamespaceSchemaLocation="schema.xsd">
+
+  <progetto>
+    <denominazione>Progetto A</denominazione>
+    <personeCoinvolte>
+      <cognome>Rossi</cognome>
+      <nome>Mario</nome>
+    </personeCoinvolte>
+    <personeCoinvolte>
+      <cognome>Bianchi</cognome>
+      <nome>Anna</nome>
+    </personeCoinvolte>
+    <budgetDisponibile>10000.00</budgetDisponibile>
+    <attivita>
+      <descrizione>Attività 1</descrizione>
+      <scadenza>2023-12-31</scadenza>
+      <avanzamento>25.5</avanzamento>
+      <priorita>ALTA</priorita>
+    </attivita>
+    <attivita>
+      <descrizione>Attività 2</descrizione>
+      <scadenza>2024-01-15</scadenza>
+      <avanzamento>50.0</avanzamento>
+      <priorita>MEDIA</priorita>
+    </attivita>
+  </progetto>
+
+  <progetto>
+    <denominazione>Progetto B</denominazione>
+    <personeCoinvolte>
+      <cognome>Verdi</cognome>
+      <nome>Luigi</nome>
+    </personeCoinvolte>
+    <budgetDisponibile>8000.00</budgetDisponibile>
+    <!-- Può non avere attività definite -->
+  </progetto>
+
+</documento>
